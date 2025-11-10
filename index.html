@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Canon Printer Setup Guide — Wi-Fi & USB | Quick Steps</title>
+  <meta name="description" content="Step-by-step Canon printer setup guide for Wi-Fi and USB (Windows & Mac). Clear instructions, videos, troubleshooting, and FAQ." />
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root{
+      --accent:#e6002d;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --text:#0b1220;
+      --radius:14px;
+      --container:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+    .container{max-width:var(--container);margin:0 auto;padding:28px}
+    header{background:#fff;padding:18px 0;border-bottom:1px solid #eef2f7;position:sticky;top:0;z-index:40}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-box{width:46px;height:46px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(15,23,36,0.06)}
+    .site-title{font-size:16px;margin:0}
+    .site-sub{color:var(--muted);font-size:13px;margin:0}
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer;text-decoration:none}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 30px rgba(15,98,254,0.12)}
+    .btn-secondary{background:transparent;color:var(--text);border:1px solid #e6e9ef}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:44px 0}
+    .hero-card{background:var(--card);border-radius:var(--radius);padding:34px;box-shadow:0 12px 36px rgba(15,23,36,0.06)}
+    .hero h1{font-size:28px;margin:0 0 10px}
+    .lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .feature{display:flex;gap:12px;align-items:center;background:#f8fbff;padding:10px 12px;border-radius:10px}
+    .feature strong{display:block}
+    /* Right panel */
+    .panel{background:linear-gradient(180deg,#fff,#fffaf6);border-radius:14px;padding:18px;border:1px solid rgba(15,23,36,0.03)}
+    .quick-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .quick{display:flex;gap:12px;align-items:center;background:#fff;padding:10px;border-radius:10px}
+    /* Steps */
+    .section-title{font-size:20px;margin:0 0 6px}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+    .step-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(12,20,40,0.04)}
+    .step-num{width:42px;height:42px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 6px 20px rgba(12,20,40,0.04)}
+    .step h3{margin:0 0 6px;font-size:16px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    /* Visuals */
+    .visuals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    .visual-card{background:var(--card);padding:12px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 36px rgba(12,20,40,0.04)}
+    .visual-card img{width:100%;height:auto;max-width:520px;border-radius:8px}
+    figcaption{margin-top:10px;color:var(--muted);font-size:13px;text-align:center}
+    /* Video section */
+    .video-section{margin-top:28px}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000}
+    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    .video-title{margin-top:10px;text-align:left;font-size:14px;color:var(--text)}
+    /* FAQ & support */
+    .faq-grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:18px}
+    .faq-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(12,20,40,0.04)}
+    .support-card{background:linear-gradient(180deg,#fff,#fffaf0);padding:18px;border-radius:12px}
+    .list-clean{padding-left:18px;color:var(--muted)}
+    /* Trust */
+    .trust{display:flex;gap:12px;align-items:center;margin-top:22px;flex-wrap:wrap}
+    .badge{background:#fff;padding:10px 12px;border-radius:10px;display:flex;align-items:center;gap:10px;border:1px solid #eef2f7;color:var(--muted);font-size:13px}
+    footer{margin-top:36px;padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .video-grid{grid-template-columns:repeat(2,1fr)}
+      .steps-grid{grid-template-columns:1fr}
+      .visuals{grid-template-columns:1fr}
+      .faq-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .video-grid{grid-template-columns:1fr}
+      .features{flex-direction:column}
+      .header-inner{flex-direction:column;align-items:stretch;gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-box" aria-hidden="true">
+          <!-- decorative generic device icon (no trademarks) -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="6" width="18" height="11" rx="2" stroke="#c8d8ff" stroke-width="1.6" fill="#fff"/>
+            <path d="M7 3h10v4H7z" fill="#f8fbff"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="site-title">Printer Setup Guide</h2>
+          <p class="site-sub">Canon-compatible Wi-Fi & USB setup — Windows & Mac</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn btn-secondary" href="#steps">How to Setup</a>
+        <a class="btn btn-secondary" href="#visuals">Visuals</a>
+        <a class="btn btn-primary" href="#faqs">Get Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-card">
+        <h1 id="hero-heading">Set up your Canon-compatible printer quickly — Wi-Fi or USB</h1>
+        <p class="lead">Follow simple, tested steps for connecting your printer to a wireless network or direct USB connection. Includes video tutorials, troubleshooting tips, and answers to common questions.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#steps">Start Setup</a>
+          <a class="btn btn-secondary" href="https://ij.start.canon" target="_blank" rel="noopener noreferrer">Download Drivers</a>
+        </div>
+
+        <div class="features" aria-hidden="true">
+          <div class="feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:0.9"><path d="M3 7h18v7a2 2 0 0 1-2 2h-2v3H7v-3H5a2 2 0 0 1-2-2V7z" stroke="#bcd9ff" stroke-width="1.6" fill="none"/></svg>
+            <div><strong>Wi-Fi & USB</strong><div style="font-size:13px;color:var(--muted)">Both connection methods covered</div></div>
+          </div>
+
+          <div class="feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:0.9"><path d="M12 2v10l3 3" stroke="#bcd9ff" stroke-width="1.6" fill="none"/></svg>
+            <div><strong>Fast & Verified</strong><div style="font-size:13px;color:var(--muted)">Steps tested for common models</div></div>
+          </div>
+
+          <div class="feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:0.9"><path d="M5 12h14" stroke="#bcd9ff" stroke-width="1.6" fill="none"/></svg>
+            <div><strong>Policy-friendly</strong><div style="font-size:13px;color:var(--muted)">Ad-safe wording and links</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-labelledby="quick-start">
+        <h3 id="quick-start" style="margin:0 0 8px">Quick Start</h3>
+        <p class="muted" style="margin:0 0 12px">Have these ready before you begin: printer model, Wi-Fi name & password, or a USB cable for direct connection.</p>
+
+        <div class="quick-list">
+          <div class="quick">
+            <div style="width:40px;height:40px;border-radius:8px;background:#f4f8ff;display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="11" rx="2" stroke="#bcd9ff" stroke-width="1.6"/></svg>
+            </div>
+            <div style="flex:1">
+              <strong>Know your model</strong>
+              <div class="muted" style="font-size:13px">Model number is on the front or top</div>
+            </div>
+          </div>
+
+          <div class="quick">
+            <div style="width:40px;height:40px;border-radius:8px;background:#fff7f7;display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v6M5 9h14" stroke="#ffd3d8" stroke-width="1.6"/></svg>
+            </div>
+            <div style="flex:1">
+              <strong>Wi-Fi info</strong>
+              <div class="muted" style="font-size:13px">SSID and password for wireless setup</div>
+            </div>
+          </div>
+
+          <div class="quick">
+            <div style="width:40px;height:40px;border-radius:8px;background:#f4fff9;display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 3h10v4H7z" stroke="#c8f1dd" stroke-width="1.6"/></svg>
+            </div>
+            <div style="flex:1">
+              <strong>Drivers</strong>
+              <div class="muted" style="font-size:13px">Download official drivers at ij.start.canon</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <a class="btn btn-primary" href="#steps">Step-by-Step</a>
+          <a class="btn btn-secondary" href="#visuals">Visual Guide</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Steps: Wi-Fi & USB -->
+    <section id="steps" aria-labelledby="how-to-setup">
+      <h2 id="how-to-setup" class="section-title">How to set up — Quick steps</h2>
+      <p class="muted">Concise instructions for both wireless and USB connections. Follow the relevant column below for your preferred method.</p>
+
+      <div class="steps-grid" style="margin-top:12px">
+        <div class="step-card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">1</div>
+            <div class="step">
+              <h3>Power on & prepare</h3>
+              <p>Plug in the printer and press Power. Confirm it's ready (no blinking error lights) before proceeding.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">2</div>
+            <div class="step">
+              <h3>Wireless (Wi-Fi) Setup</h3>
+              <p>Enable wireless mode on the printer (press the Wi-Fi button until blinking). On the printer display select your home network and enter your password.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">3</div>
+            <div class="step">
+              <h3>Download & run installer</h3>
+              <p>On your computer go to <a href="https://ij.start.canon" target="_blank" rel="noopener noreferrer">ij.start.canon</a>, enter your model, download the driver package, and choose <strong>Wireless Connection</strong> when prompted.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">4</div>
+            <div class="step">
+              <h3>Confirm & test</h3>
+              <p>Run a test print from your device to confirm the printer is connected and working on the network.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">1</div>
+            <div class="step">
+              <h3>Power on & cable</h3>
+              <p>Turn on the printer and connect to your computer using a USB cable (use a USB-A to USB-B cable if required).</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">2</div>
+            <div class="step">
+              <h3>Run the installer</h3>
+              <p>From <a href="https://ij.start.canon" target="_blank" rel="noopener noreferrer">ij.start.canon</a> download drivers and select <strong>USB Connection</strong> during setup. The installer will detect the printer automatically.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">3</div>
+            <div class="step">
+              <h3>Install & verify</h3>
+              <p>Follow on-screen prompts to finish installation. Print a test page to verify the connection and alignment.</p>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #f1f3f7;margin:14px 0"/>
+
+          <div style="display:flex;gap:12px;align-items:flex-start">
+            <div class="step-num">4</div>
+            <div class="step">
+              <h3>Optional: Network share</h3>
+              <p>If needed, you can share the printer from the host computer or add it on other devices via network discovery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visuals / Images -->
+    <section id="visuals" class="visuals" aria-labelledby="visuals-heading">
+      <div style="grid-column:1/-1">
+      </div>
+
+      <figure class="visual-card" style="padding:18px">
+        <img src="images/step-wifi.png" alt="Illustration showing printer connecting to router and laptop over Wi-Fi" loading="lazy"/>
+        <figcaption>Wi-Fi setup — power on, enable wireless, select network, run installer</figcaption>
+      </figure>
+
+      <figure class="visual-card" style="padding:18px">
+        <img src="images/step-usb.png" alt="Illustration showing printer connected to computer via USB cable" loading="lazy"/>
+        <figcaption>USB setup — connect the USB cable, run installer, print test page</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- Video tutorials -->
+    <section class="video-section" aria-labelledby="videos-heading">
+      <h2 id="videos-heading" class="section-title">Setup Video Tutorials</h2>
+      <p class="muted">Publicly available video guides to help with Wi-Fi and USB setup. We do not claim ownership of these videos — they are provided for convenience.</p>
+
+      <div class="video-grid" style="margin-top:12px">
+        <div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/XN7l-Bn62hU" title="Canon Wi-Fi Setup Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-title">Canon Wi-Fi Setup Guide (official & general)</p>
+        </div>
+
+        <div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/watch?v=JbA-E3s72o8" title="Canon USB Setup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-title">Canon USB Cable Setup — Windows & Mac</p>
+        </div>
+
+        <div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/watch?v=obKJlC3GXs8" title="Canon WPS Setup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-title">Wi-Fi Setup Using WPS / Router Button</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ and Troubleshooting -->
+    <section id="faqs" class="faq-grid" aria-labelledby="faq-heading">
+      <div class="faq-card" id="faq-list">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+
+        <div style="margin-top:12px">
+          <h4 style="margin:10px 0 6px">Do I need a CD to install the printer?</h4>
+          <p class="muted">No — download the latest drivers from the official Canon setup page at <a href="https://ij.start.canon" target="_blank" rel="noopener noreferrer">ij.start.canon</a>.</p>
+
+          <h4 style="margin:10px 0 6px">Why won’t my printer connect to Wi-Fi?</h4>
+          <p class="muted">Ensure the printer and computer are on the same Wi-Fi network, confirm the SSID/password, and restart your router and printer before retrying.</p>
+
+          <h4 style="margin:10px 0 6px">Can multiple devices use the same printer?</h4>
+          <p class="muted">Yes. Once connected to Wi-Fi, any device on the same network can discover and use the printer.</p>
+
+          <h4 style="margin:10px 0 6px">Where is my model number?</h4>
+          <p class="muted">Typically printed on the front or top of the printer (e.g., TS, MG, or PIXMA series). Use this to download the correct driver.</p>
+
+          <h4 style="margin:10px 0 6px">Do I need ink to complete setup?</h4>
+          <p class="muted">You can install drivers without ink, but printing and alignment require cartridges to be installed.</p>
+        </div>
+      </div>
+
+      <aside class="support-card support-card-right support-card" aria-labelledby="support-heading">
+        <div class="support-card" style="padding:18px">
+          <h3 id="support-heading" style="margin:0 0 8px">Common Issues & Fixes</h3>
+
+          <ul class="list-clean" style="margin-top:8px;line-height:1.6">
+            <li><strong>Printer not found during install:</strong> Restart printer & router, reconnect to Wi-Fi, then re-run installer.</li>
+            <li><strong>Poor print quality:</strong> Run printhead alignment and check ink levels.</li>
+            <li><strong>Paper jams:</strong> Remove paper gently, check the path and rollers for debris.</li>
+            <li><strong>Printer offline:</strong> Set the printer as default in system settings and verify network connection.</li>
+          </ul>
+
+          <div style="margin-top:14px;display:flex;gap:8px">
+            <a class="btn btn-primary" href="#visuals">View Visuals</a>
+            <a class="btn btn-secondary" href="#videos">Watch Videos</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Trust & badges -->
+    <section class="trust" aria-hidden="true">
+      <div class="badge">Official driver links</div>
+      <div class="badge">Policy-friendly instructions</div>
+      <div class="badge">Tested & concise steps</div>
+    </section>
+
+    <footer>
+      <div class="container">
+        © <strong>Printer Setup Guide</strong> — This page links to official driver pages and publicly available video tutorials. We are not affiliated with or endorsed by Canon.
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
